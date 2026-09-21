@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SparkForce Cleaning Services</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+
+  
+
+  <!-- Image generation placeholders (data-gen-*) will be used by generation tools -->
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+<body class="bg-gray-50 text-slate-800">
+  <!-- Top navigation -->
+  <header class="sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-gray-200">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <div class="flex items-center space-x-3">
+        <img src="assets/images/1772732007643_logo_transparent_bk.png" alt="SparkForce logo" class="h-8 md:h-9 object-contain font-extrabold text-6xl" style="">
+        
+      </div>
+      <ul class="hidden md:flex items-center space-x-6 text-sm">
+        <li><a href="#home" class="hover:text-sky-700" style="cursor: default;">Home</a></li>
+        <li><a href="#services" class="hover:text-sky-700" style="cursor: default;">Services</a></li>
+        <li><a href="#pricing" class="hover:text-sky-700" style="cursor: default;">Pricing</a></li>
+        <li><a href="#testimonials" class="hover:text-sky-700" style="cursor: default;">Testimonials</a></li>
+        <li><a href="#contact" class="hover:text-sky-700" style="cursor: default;">Contact</a></li>
+      </ul>
+      <a href="#contact" class="hidden md:inline-flex items-center px-4 py-2 bg-sky-600 text-white rounded hover:bg-sky-700 transition" style="cursor: default;">Book Now</a>
+      <button id="menuBtn" class="md:hidden text-slate-700 focus:outline-none p-2 rounded hover:bg-gray-100">
+        <i class="bi bi-list" style="font-size:1.2rem;"></i>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
+      <a href="#home" class="block px-4 py-2 border-b border-gray-100" style="cursor: default;">Home</a>
+      <a href="#services" class="block px-4 py-2 border-b border-gray-100" style="cursor: default;">Services</a>
+      <a href="#pricing" class="block px-4 py-2 border-b border-gray-100" style="cursor: default;">Pricing</a>
+      <a href="#testimonials" class="block px-4 py-2 border-b border-gray-100" style="cursor: default;">Testimonials</a>
+      <a href="#contact" class="block px-4 py-2" style="cursor: default;">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="min-h-screen flex items-center">
+    <div class="container mx-auto px-6 py-20">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Copy -->
+        <div class="space-y-6">
+          
+          <h1 class="text-5xl md:text-6xl font-extrabold" style="font-family: Montserrat, system-ui, sans-serif;">
+            SparkForce Cleaning Services
+          </h1>
+          <p class="text-lg text-gray-700 max-w-2xl leading-relaxed" style="font-family: Inter, system-ui, sans-serif;">
+            Professional residential and commercial cleaning that feels effortless. Trusted, eco-friendly, and crafted for spaces that deserve to shine.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="#pricing" class="inline-flex items-center px-6 py-3 rounded-lg bg-sky-600 text-white hover:bg-sky-700 transition-shadow shadow-md" style="cursor: default;">
+              <span class="mr-2"><i class="bi bi-calendar-check"></i></span> Get a Free Quote
+            </a>
+            <a href="#services" class="inline-flex items-center px-6 py-3 rounded-lg border border-sky-600 text-sky-600 hover:bg-sky-50 transition" style="cursor: default;">
+              Our Services
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="relative">
+          <div class="rounded-2xl overflow-hidden shadow-xl bg-white glass p-4">
+            <!-- Background decorative image (generated) -->
+            <div class="h-72 rounded-2xl overflow-hidden bg-cover bg-center" style="background: #f6f7fb; display:flex; align-items: center; justify-content: center;">
+              <div class="w-full h-full floaty" aria-label="Hero visual background" data-gen-prompt="A bright, premium cleaning service in a modern living room with natural daylight, a pristine white sofa, glossy surfaces, and a professional cleaner in a navy uniform using high-end cleaning tools. The vibe is trustworthy, energetic, and luxurious, with soft blue-gray tones and shallow depth of field." data-gen-aspect="21:9" style="background-image: url(&quot;https://media.clicksites.ai/clicksites/uploads/10370/create_an_image_of_a_white_van_ffc1f84681a07c5fd65fb3d93f8af305.png&quot;); background-size: cover; background-position: center center;"></div>
+            </div>
+            <!-- Foreground image (generated) -->
+            <div class="absolute right-6 bottom-6 w-40 h-28 rounded-xl overflow-hidden shadow-lg">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Admin Pricing Manager -->
+      
+
+      <script>
+(function(){
+  const storageKey='servicePrices';
+  function getInitialData(){
+    const raw = localStorage.getItem(storageKey);
+    if(raw) {
+      try { return JSON.parse(raw); } catch(e) { return []; }
+    }
+    // seed
+    return [
+      {id:'c1', category:'Standard Cleaning', price:89},
+      {id:'c2', category:'Deep Cleaning', price:199},
+      {id:'c3', category:'Move-out/Move-in', price:249}
+    ];
+  }
+  let data = getInitialData();
+  // if localStorage empty, seed
+  if(!localStorage.getItem(storageKey)){
+    localStorage.setItem(storageKey, JSON.stringify(data));
+  }
+
+  function render(){
+    const tbody=document.getElementById('price-table');
+    if(!tbody) return;
+    tbody.innerHTML='';
+    data.forEach(item=>{
+      const tr=document.createElement('tr');
+      tr.innerHTML = `
+        <td class="px-4 py-2">${item.category}</td>
+        <td class="px-4 py-2 text-right">${item.price.toFixed(2)}</td>
+        <td class="px-4 py-2 text-right">
+          <button data-id="${item.id}" class="text-xs px-2 py-1 bg-sky-100 text-sky-700 rounded edit-btn">Edit</button>
+          <button data-id="${item.id}" class="text-xs px-2 py-1 bg-red-100 text-red-700 rounded delete-btn">Delete</button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+    document.querySelectorAll('.edit-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const id=btn.dataset.id;
+        const item=data.find(i=>i.id===id);
+        const newCat = prompt('Edit category', item.category);
+        if(newCat===null) return;
+        const newPrice = parseFloat(prompt('Edit price', item.price));
+        if(isNaN(newPrice)) return;
+        item.category=newCat;
+        item.price=newPrice;
+        save();
+      });
+    });
+    document.querySelectorAll('.delete-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const id=btn.dataset.id;
+        if(confirm('Delete this category?')){
+          data = data.filter(i=>i.id!==id);
+          save();
+        }
+      });
+    });
+  }
+
+  function save(){
+    localStorage.setItem(storageKey, JSON.stringify(data));
+    render();
+  }
+
+  // init
+  function addFromForm(e){
+    e.preventDefault();
+    const cat=document.getElementById('cat').value.trim();
+    const priceVal=document.getElementById('price').value;
+    const price = parseFloat(priceVal);
+    if(!cat || isNaN(price)) return;
+    data.push({id: 'c'+Date.now(), category: cat, price});
+    save();
+    document.getElementById('cat').value='';
+    document.getElementById('price').value='';
+  }
+
+  document.addEventListener('DOMContentLoaded', ()=>{
+    render();
+    const form=document.getElementById('price-form');
+    if(form) form.addEventListener('submit', addFromForm);
+    const clearBtn=document.getElementById('clear-btn');
+    if(clearBtn) clearBtn.addEventListener('click', ()=>{
+      localStorage.removeItem(storageKey);
+      data = [];
+      save();
+    });
+  });
+})();
+</script>
+    </div>
+  </section>
+
+  <!-- WHY SPARKFORCE -->
+  <section aria-label="Why SparkForce" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-sm uppercase tracking-widest text-sky-600 font-semibold">Why choose us</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold" style="font-family: Montserrat, system-ui, sans-serif;">
+            A refreshing approach to cleaning
+          </h2>
+          <p class="text-gray-700 leading-relaxed" style="font-family: Inter, system-ui, sans-serif;">
+            SparkForce brings reliability, eco-friendly practices, and flexible scheduling to every space. Our team is insured, vetted, and trained to deliver a premium clean with minimal disruption.
+          </p>
+        </div>
+
+        <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Card 1 -->
+          <div class="glass p-5 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1">
+            <div class="flex items-center gap-3 text-sky-600">
+              <i class="bi bi-shield-check" style="font-size:1.4rem;"></i>
+              <span class="font-semibold">Fully Insured</span>
+            </div>
+            <p class="text-sm text-gray-600 mt-2">Your space is protected. We carry comprehensive liability coverage and state-of-the-art safety protocols.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="glass p-5 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1">
+            <div class="flex items-center gap-3 text-sky-600">
+              <i class="bi bi-recycle" style="font-size:1.4rem;"></i>
+              <span class="font-semibold">Eco-friendly</span>
+            </div>
+            <p class="text-sm text-gray-600 mt-2">Green cleaning products, reduced waste, and responsible disposal practices for a healthier home and planet.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="glass p-5 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1">
+            <div class="flex items-center gap-3 text-sky-600">
+              <i class="bi bi-calendar-check" style="font-size:1.4rem;"></i>
+              <span class="font-semibold">Flexible Scheduling</span>
+            </div>
+            <p class="text-sm text-gray-600 mt-2">Evening and weekend slots available to fit your routine without fuss.</p>
+          </div>
+          <!-- Card 4 (optional) -->
+          <div class="glass p-5 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1">
+            <div class="flex items-center gap-3 text-sky-600">
+              <i class="bi bi-stars" style="font-size:1.4rem;"></i>
+              <span class="font-semibold">High-Quality Assurance</span>
+            </div>
+            <p class="text-sm text-gray-600 mt-2">Check-in processes and a satisfaction guarantee to ensure you love the result.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" aria-label="Services" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-8">
+        <span class="text-sm uppercase tracking-widest text-sky-600 font-semibold">What we offer</span>
+        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold" style="font-family: Montserrat, system-ui, sans-serif;">
+          Residential &amp; Commercial Cleaning
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white rounded-2xl shadow hover:shadow-xl transition p-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <i class="bi bi-house-door-fill text-2xl text-sky-600"></i>
+              <h3 class="text-xl font-semibold" style="font-family: Montserrat, system-ui, sans-serif;">House Cleaning</h3>
+            </div>
+            <span class="text-sm text-gray-500">Routine</span>
+          </div>
+          <p class="mt-3 text-gray-700" style="font-family: Inter, system-ui, sans-serif;">
+            A thorough clean of bedrooms, living spaces, kitchen and bathrooms with attention to detail and eco-friendly products.
+          </p>
+          <div class="mt-4">
+            <a href="#contact" class="inline-flex items-center px-4 py-2 rounded-lg bg-sky-600 text-white hover:bg-sky-700 transition" style="cursor: default;">
+              Learn More
+            </a>
+          </div>
+          <img src="assets/images/a_bright_premium_home_cleanin_a37af778c51261ce4a9ef1d03f54d677.png" alt="House cleaning service" class="mt-4 w-full rounded-lg object-cover h-40">
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white rounded-2xl shadow hover:shadow-xl transition p-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <i class="bi bi-robot text-2xl text-sky-600"></i>
+              <h3 class="text-xl font-semibold" style="font-family: Montserrat, system-ui, sans-serif;">Deep Clean</h3>
+            </div>
+            <span class="text-sm text-gray-500">Intense</span>
+          </div>
+          <p class="mt-3 text-gray-700" style="font-family: Inter, system-ui, sans-serif;">
+            Thorough sanitization, edge-to-edge scrubbing, and detail-oriented tasks for a showroom-clean finish.
+          </p>
+          <div class="mt-4">
+            <a href="#contact" class="inline-flex items-center px-4 py-2 rounded-lg bg-sky-600 text-white hover:bg-sky-700 transition" style="cursor: default;">
+              Learn More
+            </a>
+          </div>
+          <img src="assets/images/a_meticulous_deep_clean_scene_b8a5f7d59af47eb18b9bea2ab3f84d0d.png" alt="Deep cleaning service" class="mt-4 w-full rounded-lg object-cover h-40">
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white rounded-2xl shadow hover:shadow-xl transition p-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <i class="bi bi-building text-2xl text-sky-600"></i>
+              <h3 class="text-xl font-semibold" style="font-family: Montserrat, system-ui, sans-serif;">Office Cleaning</h3>
+            </div>
+            <span class="text-sm text-gray-500">Commercial</span>
+          </div>
+          <p class="mt-3 text-gray-700" style="font-family: Inter, system-ui, sans-serif;">
+            Flexible, discreet daytime and after-hours cleaning for corporate spaces of any size.
+          </p>
+          <div class="mt-4">
+            <a href="#contact" class="inline-flex items-center px-4 py-2 rounded-lg bg-sky-600 text-white hover:bg-sky-700 transition" style="cursor: default;">
+              Learn More
+            </a>
+          </div>
+          <img src="assets/images/a_clean_modern_office_environ_3e2d30a915122cd47f56988d0736f08b.png" alt="Office cleaning service" class="mt-4 w-full rounded-lg object-cover h-40">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" aria-label="Booking process" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-8">
+        <span class="text-sm uppercase tracking-widest text-sky-600 font-semibold">Simple, clear steps</span>
+        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold" style="font-family: Montserrat, system-ui, sans-serif;">
+          How it works
+        </h2>
+      </div>
+
+      <div class="md:flex md:items-center md:justify-between gap-6">
+        <!-- Timeline (desktop) -->
+        <ol class="md:w-2/3 md:order-1 space-y-4">
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-sky-600 text-white flex items-center justify-center font-semibold">1</div>
+            <div>
+              <div class="font-semibold">Book online</div>
+              <div class="text-sm text-gray-600">Choose date, scope, and preferred times using our simple form.</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-sky-600 text-white flex items-center justify-center font-semibold">2</div>
+            <div>
+              <div class="font-semibold">We confirm</div>
+              <div class="text-sm text-gray-600">You’ll receive a clear, no-surprises quote and booking confirmation.</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-sky-600 text-white flex items-center justify-center font-semibold">3</div>
+            <div>
+              <div class="font-semibold">Clean visit</div>
+              <div class="text-sm text-gray-600">Professional cleaners arrive on time with premium equipment and eco products.</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-sky-600 text-white flex items-center justify-center font-semibold">4</div>
+            <div>
+              <div class="font-semibold">Feedback &amp; revisits</div>
+              <div class="text-sm text-gray-600">We follow up for satisfaction and schedule any follow-up visits if needed.</div>
+            </div>
+          </li>
+        </ol>
+
+        <!-- Illustration -->
+        <div class="md:w-1/3 mt-6 md:mt-0">
+          <div class="rounded-xl overflow-hidden shadow-xl bg-gradient-to-br from-sky-50 to-white p-4 h-full">
+            <div class="h-48 bg-cover bg-center rounded" style="background-image: url(&quot;https://media.clicksites.ai/clicksites/uploads/10370/professional_residential_and_c_872146d1554993df688aa4d2fa3b2278.png&quot;);"></div>
+            <p class="mt-3 text-sm text-gray-600">A clean, calm process designed to fit busy schedules without sacrificing quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" aria-label="Pricing" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-8">
+        <span class="text-sm uppercase tracking-widest text-sky-600 font-semibold">Transparent pricing</span>
+        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold" style="font-family: Montserrat, system-ui, sans-serif;">
+          Simple packages to suit every space
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-6">
+        <!-- Tier 1 -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-6">
+          <div class="flex items-baseline justify-between">
+            <span class="text-sm uppercase tracking-widest text-sky-600 font-semibold">Essential</span>
+            <span class="text-sm text-gray-500">From</span>
+          </div>
+          <div class="mt-3">
+            <span class="text-4xl font-extrabold" style="font-family: Montserrat, system-ui, sans-serif;">€89</span>
+            <span class="text-sm text-gray-500">/ visit</span>
+          </div>
+          <p class="mt-2 text-gray-700 text-sm">Standard cleaning kit, surfaces wiped, floors sweep &amp; mop, bathroom kiss-clean.</p>
+          <ul class="mt-3 text-sm text-gray-700 space-y-1">
+            <li><i class="bi bi-check2-circle text-green-500"></i> Kitchen &amp; bathroom sanitization</li>
+            <li><i class="bi bi-check2-circle text-green-500"></i> Living areas and bedrooms</li>
+            <li><i class="bi bi-check2-circle text-green-500"></i> Vacuum and mop all floors</li>
+          </ul>
+          <a href="#contact" class="mt-4 inline-flex items-center px-4 py-2 rounded-lg bg-sky-600 text-white hover:bg-sky-700 transition" style="cursor: default;">Book Now</a>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-6">
+          <div class="flex items-baseline justify-between">
+            <span class="text-sm uppercase tracking-widest text-sky-600 font-semibold">Standard</span>
+            <span class="text-sm text-gray-500">From</span>
+          </div>
+          <div class="mt-3">
+            <span class="text-4xl font-extrabold" style="font-family: Montserrat, system-ui, sans-serif;">€119</span>
+            <span class="text-sm text-gray-500">/ visit</span>
+          </div>
+          <p class="mt-2 text-gray-700 text-sm">Deep cleaning touchpoints, oven and fridge interiors, upgraded products.</p>
+          <ul class="mt-3 text-sm text-gray-700 space-y-1">
+            <li><i class="bi bi-check2-circle text-green-500"></i> Deep cleaning of fixtures</li>
+            <li><i class="bi bi-check2-circle text-green-500"></i> Appliance interiors</li>
+            <li><i class="bi bi-check2-circle text-green-500"></i> All surfaces detailed</li>
+          </ul>
+          <a href="#contact" class="mt-4 inline-flex items-center px-4 py-2 rounded-lg bg-sky-600 text-white hover:bg-sky-700 transition" style="cursor: default;">Book Now</a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-6">
+          <div class="flex items-baseline justify-between">
+            <span class="text-sm uppercase tracking-widest text-sky-600 font-semibold">Premium</span>
+            <span class="text-sm text-gray-500">From</span>
+          </div>
+          <div class="mt-3">
+            <span class="text-4xl font-extrabold" style="font-family: Montserrat, system-ui, sans-serif;">€189</span>
+            <span class="text-sm text-gray-500">/ visit</span>
+          </div>
+          <p class="mt-2 text-gray-700 text-sm">All-inclusive, premium-grade products, extendable service windows, and priority scheduling.</p>
+          <ul class="mt-3 text-sm text-gray-700 space-y-1">
+            <li><i class="bi bi-check2-circle text-green-500"></i> All Standard features plus deep sanitization</li>
+            <li><i class="bi bi-check2-circle text-green-500"></i> Premium cleaning solutions</li>
+            <li><i class="bi bi-check2-circle text-green-500"></i> Flexible scheduling &amp; priority slots</li>
+          </ul>
+          <a href="#contact" class="mt-4 inline-flex items-center px-4 py-2 rounded-lg bg-sky-600 text-white hover:bg-sky-700 transition" style="cursor: default;">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" aria-label="Testimonials" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-8">
+        <span class="text-sm uppercase tracking-widest text-sky-600 font-semibold">What clients say</span>
+        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold" style="font-family: Montserrat, system-ui, sans-serif;">
+          Trusted by homes and offices
+        </h2>
+      </div>
+
+      <div class="relative overflow-hidden rounded-xl shadow-xl bg-white p-6">
+        <!-- Carousel -->
+        <div id="carousel" class="relative" style="min-height: 180px;">
+          <div class="carousel-item active items-start gap-4 flex" aria-label="Testimonial 1">
+            <div class="w-12 h-12 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 font-semibold">JD</div>
+            <div>
+              <p class="text-gray-700">“SparkForce transformed our workspace—spotless, quiet, and reliable. Our team loves the fresh environment.”</p>
+              <div class="mt-2 text-sm text-gray-600">- Jamie D, London</div>
+              <div class="mt-1 text-yellow-400">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item items-start gap-4 hidden" aria-label="Testimonial 2">
+            <div class="w-12 h-12 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 font-semibold">AH</div>
+            <div>
+              <p class="text-gray-700">“Professional, friendly, and thorough. Our home has never felt cleaner.”</p>
+              <div class="mt-2 text-sm text-gray-600">- Alex H, Guildford</div>
+              <div class="mt-1 text-yellow-400">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item items-start gap-4 hidden" aria-label="Testimonial 3">
+            <div class="w-12 h-12 rounded-full bg-sky-100 flex items-center justify-center text-sky-700 font-semibold">MS</div>
+            <div>
+              <p class="text-gray-700">“Reliable and flexible—great for busy offices and after-hours visits.”</p>
+              <div class="mt-2 text-sm text-gray-600">- Maria S, Manchester</div>
+              <div class="mt-1 text-yellow-400">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-center mt-4 space-x-3">
+          <button id="prev" class="p-2 rounded-full bg-gray-100 hover:bg-gray-200"><i class="bi bi-chevron-left"></i></button>
+          <button id="next" class="p-2 rounded-full bg-gray-100 hover:bg-gray-200"><i class="bi bi-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Team / background visual (generated) -->
+      <div class="mt-8 grid lg:grid-cols-2 gap-6 items-center">
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="text-xl font-semibold" style="font-family: Montserrat, system-ui, sans-serif;">Meet the team</h3>
+          <p class="mt-2 text-gray-700" style="font-family: Inter, system-ui, sans-serif;">
+            Our cleaners are trained, vetted, and supported by a friendly operations team. We pride ourselves on punctuality and care.
+          </p>
+          <div class="mt-4 flex space-x-4">
+            <span class="inline-flex items-center px-3 py-2 rounded-full bg-sky-50 text-sky-700 border border-sky-100">
+              <i class="bi bi-person-fill me-2"></i> Background-checked
+            </span>
+            <span class="inline-flex items-center px-3 py-2 rounded-full bg-sky-50 text-sky-700 border border-sky-100">
+              <i class="bi bi-shield-check me-2"></i> Fully insured
+            </span>
+          </div>
+        </div>
+
+        <div class="rounded-2xl overflow-hidden border border-slate-200 h-48">
+          <!-- Generated background image -->
+          <div data-gen-prompt="A friendly, diverse team of professional cleaners posing in a modern office. They wear matching navy uniforms, smiles, and a confident stance. High-quality, vibrant lighting with natural tones and a premium feel." data-gen-aspect="16:9" class="h-full w-full bg-cover bg-center" style="background-size: cover; background-position: center center; background-image: url(&quot;https://media.clicksites.ai/clicksites/uploads/10370/generate_a_hign_resolution_ima_703758bfbfd48bb7bde3a13c3dad17f2.png&quot;);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-label="Contact" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Form -->
+        <form class="bg-white rounded-2xl shadow p-6" autocomplete="off" onsubmit="return validateAndMail(event);">
+          <h3 class="text-xl font-semibold mb-4" style="font-family: Montserrat, system-ui, sans-serif;">Book a cleaning</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm text-gray-700 mb-1">Your name</label>
+              <input class="w-full border border-gray-200 rounded px-3 py-2" type="text" placeholder="Jane Doe" required="">
+            </div>
+            <div>
+              <label class="block text-sm text-gray-700 mb-1">Email</label>
+              <input class="w-full border border-gray-200 rounded px-3 py-2" type="email" placeholder="you@example.com" required="">
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-4 mt-4">
+            <div>
+              <label class="block text-sm text-gray-700 mb-1">Phone</label>
+              <input class="w-full border border-gray-200 rounded px-3 py-2" type="tel" placeholder="07700 900123">
+            </div>
+            <div>
+              <label class="block text-sm text-gray-700 mb-1">Preferred date</label>
+              <input class="w-full border border-gray-200 rounded px-3 py-2" type="date">
+            </div>
+          </div>
+          <div class="mt-4">
+            <label class="block text-sm text-gray-700 mb-1">Service</label>
+            <select class="w-full border border-gray-200 rounded px-3 py-2">
+              <option>House Cleaning</option>
+              <option>Deep Clean</option>
+              <option>Office Cleaning</option>
+              <option>Custom / Other</option>
+            </select>
+          </div>
+          <div class="mt-4">
+            <label class="block text-sm text-gray-700 mb-1">Message</label>
+            <textarea class="w-full border border-gray-200 rounded px-3 py-2" rows="4" placeholder="Tell us about your space, access, and any special requests"></textarea>
+          </div>
+          <button type="submit" class="mt-4 inline-flex items-center px-5 py-3 rounded-lg bg-sky-600 text-white hover:bg-sky-700 transition">Submit</button>
+        </form>
+<script>
+  function validateAndMail(e) {
+    const form = e.target;
+    const nameInput = form.querySelector('input[type="text"]');
+    const emailInput = form.querySelector('input[type="email"]');
+    const phoneInput = form.querySelector('input[type="tel"]');
+    const dateInput = form.querySelector('input[type="date"]');
+    const serviceSelect = form.querySelector('select');
+    const messageTextarea = form.querySelector('textarea');
+
+    if (!nameInput || !nameInput.value.trim()) {
+      alert('Please enter your name.');
+      nameInput && nameInput.focus();
+      e.preventDefault();
+      return false;
+    }
+
+    if (!emailInput || !emailInput.value.trim()) {
+      alert('Please enter your email.');
+      emailInput && emailInput.focus();
+      e.preventDefault();
+      return false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value)) {
+      alert('Please enter a valid email address.');
+      emailInput.focus();
+      e.preventDefault();
+      return false;
+    }
+
+    if (phoneInput && phoneInput.value.trim()) {
+      const digits = phoneInput.value.replace(/[^0-9+]/g, '');
+      if (digits.length < 7) {
+        alert('Please enter a valid phone number.');
+        phoneInput.focus();
+        e.preventDefault();
+        return false;
+      }
+    }
+
+    const serviceValue = serviceSelect ? serviceSelect.value : '';
+    const dateValue = dateInput ? dateInput.value : '';
+    const bodyLines = [
+      'Name: ' + (nameInput.value || ''),
+      'Email: ' + (emailInput.value || ''),
+      'Phone: ' + (phoneInput ? phoneInput.value : ''),
+      'Preferred date: ' + dateValue,
+      'Service: ' + serviceValue,
+      'Message: ' + (messageTextarea ? messageTextarea.value : '')
+    ];
+    const body = encodeURIComponent(bodyLines.join('\n'));
+
+    const mailtoHref = 'mailto:info@sparkforce-clean.com?subject=' + encodeURIComponent('Booking enquiry') + '&body=' + body;
+    window.location.href = mailtoHref;
+    e.preventDefault();
+    return false;
+  }
+</script>
+
+        <!-- Contact details & map -->
+        <div class="bg-white rounded-2xl shadow p-6">
+          <h3 class="text-xl font-semibold mb-2" style="font-family: Montserrat, system-ui, sans-serif;">Our office</h3>
+          <p class="text-sm text-gray-600">SparkForce Cleaning Services, 2 Grovernor Square, Rathmines, Dublin 6.</p>
+          <p class="text-sm text-gray-600 mt-2">Phone: +353 899514979, +353 857447900</p>
+          <p class="text-sm text-gray-600 mt-2">Email: info@sparkforce-clean.com</p>
+
+          <div class="mt-4 rounded-lg overflow-hidden border border-gray-200">
+            <!-- Generated map background -->
+            <div data-gen-prompt="A modern, minimalist city map with clean lines, soft blues and grays, subtle pins marking service coverage, and a premium aesthetic suitable for a corporate cleaning company." data-gen-aspect="16:9" class="h-48 bg-cover bg-center" style="background-size: cover; background-position: center center; background-image: url(&quot;https://media.clicksites.ai/clicksites/uploads/10370/generate_a_hign_resolution_ima_59bf6260f6634a0181cb0a52c96069ca.png&quot;);"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-100 py-8">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-sm">© <span id="year">2026</span> SparkForce Cleaning Services. All rights reserved.</div>
+      <div class="flex items-center space-x-4 text-sm">
+        <a href="#" class="hover:text-white" style="cursor: default;">Privacy</a>
+        <a href="#" class="hover:text-white" style="cursor: default;">Terms</a>
+        <a href="#home" class="hover:text-white" style="cursor: default;">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Simple testimonial carousel
+    const items = document.querySelectorAll('#carousel .carousel-item');
+    let idx = 0;
+    function show(i) {
+      items.forEach((it, k) => {
+        it.classList.toggle('hidden', k !== i);
+        it.classList.toggle('flex', k === i);
+      });
+    }
+    function nextItem() { idx = (idx + 1) % items.length; show(idx); }
+    function prevItem() { idx = (idx - 1 + items.length) % items.length; show(idx); }
+    document.getElementById('next').addEventListener('click', nextItem);
+    document.getElementById('prev').addEventListener('click', prevItem);
+    show(idx);
+    // Auto-rotate every 7 seconds
+    setInterval(nextItem, 7000);
+
+    // Set year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple approach for image generation attribute placeholders
+    // (In production, a service would replace these with real generated images.)
+    // No network calls here; the attributes are present for generation pipelines.
+  </script>
+
+</body></html>
